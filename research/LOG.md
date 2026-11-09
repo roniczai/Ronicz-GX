@@ -1,14 +1,22 @@
-# R&D evidence log
+# Engineering research log
 
-## 2026-11-09 — initial public RONICZ GX research package
+## 2026-03-04 — historical GitHub repository creation
 
-**Repository history:** GitHub repository \`roniczai/rayhan\` was genuinely created 2026-03-04. On 2026-11-09 it was repurposed for RONICZ GX. This log does **not** say work on the GX GPU started in March.
+This GitHub repository was originally called \`rayhan\` and contained an unrelated earlier project draft. **RONICZ GX had not been documented here on this date.** The old repository creation timestamp should not be used as a GPU project start date.
 
-**Work introduced:** design assumptions, aspirational product tiers, open risk register, 8-lane integer vector ALU demonstration RTL with self-checking testbench, simple Python VRAM/weights capacity estimator, and static concept site.
+## 2026-11-09 — RONICZ GX public research baseline
 
-**Proven:** repository code can be inspected and tested. Any successful tests verify only the explicitly covered software or RTL behavior.
+The repository was renamed and given a public GPU research package: small original integer vector ALU, self-checking testbench, Python memory estimator, unit tests, technical documentation and a concept website.
 
-**Not proven:** silicon, board, GPU architecture, GDDR7 operation, Windows drivers, DirectX/Vulkan gaming, AI acceleration, cooling effectiveness, RTX 5090 parity or selling price.
+**Measured or tested:** the existing Python and RTL CI jobs completed successfully.
 
-**Next evidence:** obtain actual CI results, independent review, and tool-based synthesis/FPGA measurements.
+**Not measured or built:** custom GPU architecture, GPU VRAM, a PCIe graphics card, Windows graphics drivers, FPGA compute, DirectX/Vulkan games, real AI throughput, cooling efficiency or retail hardware.
+
+## 2026-11-09 — consumer-access mission refinement
+
+Clarified an individual-first public mission covering gaming, local AI, creation, 3D and rendering, and a complete modular **GX Station** with commercial x86-64 CPU, separately upgradeable DDR5 RAM and independent GPU VRAM. Clarified that GX 12 / 24 / 48 are research concepts, not released products.
+
+Removed public target selling prices and replaced premature claims with observable evidence gates, open questions and responsible technical communication.
+
+**Next meaningful evidence:** extended RTL/test coverage; a verified GPU-like kernel, and later an FPGA demonstration with disclosed hardware and measurements.
 

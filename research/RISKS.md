@@ -1,17 +1,18 @@
-# Open risks and falsifiable assumptions
+# Open engineering, adoption and integrity risks
 
-| Risk | Why it matters | What would reduce uncertainty |
+| Risk | Why it matters | What evidence would reduce it |
 |---|---|---|
-| Architecture | Integer vector ALU ≠ modern graphics GPU | RTL verification, memory hierarchy and scheduling prototype |
-| GPU drivers | Windows gaming requires years of compatibility work | WDDM/DirectX/Vulkan feasibility and experienced driver team |
-| GDDR7 | Very high-speed IO needs specialist controllers and SI | Licensed PHY, package and PCB design reviews |
-| Memory availability | 48 GB capacity may have difficult pricing/physical layout | Supplier quotes, die-density and controller study |
-| Manufacturing | Advanced-node ASIC is capital-intensive | Foundry and IP business case, risk-adjusted schedule |
-| Power/thermal | Low power cannot be assumed from marketing | Measured workload-specific watts and thermal data |
-| AI frameworks | CUDA dependence limits software portability | Open compiler/runtime integration and application testing |
-| Price | ₹250k retail may not cover true unit+engineering cost | Yield-adjusted BOM and volume/margin model |
-| IP/legal | Cannot clone NVIDIA proprietary RTL, firmware or branding | Original designs, legal licenses and IP review |
-| Reputation | Pre-product claims can mislead users and investors | Label all public targets and track independent evidence |
-| Team capacity | GPU requires architecture, firmware, ASIC, driver and graphics specialists | Recruit collaborators by scope and milestone |
-| Compatibility | PCIe link alone ≠ all motherboards or Windows apps | Test matrix and certification plan |
+| Technical scope | A vector ALU is far from a GPU | Runnable scheduler, memory hierarchy, shader/compute kernels |
+| Windows gaming | Drivers and graphics API support are major projects | WDDM-compatible approach and tested game/application matrix |
+| Modern VRAM | GDDR signalling, PHY/controller rights, PCB and package are difficult | Licensing assessment and measurable signal-integrity design |
+| Consumer usefulness | Capacity alone doesn't prove FPS or workflow benefit | Real users, application compatibility and independent benchmarks |
+| AI software | Framework integration and CUDA ecosystem dependencies | Working backend, reproducible model tests and limitations |
+| Reliability | Enthusiast hardware must withstand sustained loads | Long-duration thermal, electrical and crash-rate measurements |
+| Affordability | Manufacturing plus software/support may prevent accessible ownership | Validated manufacturing assumptions and actual user research |
+| Modularity | Serviceability and compactness can compete | Field-replaceable parts review and maintenance testing |
+| Consumer support | Game updates, warranty and drivers have long-tail obligations | Sustained support plan and measurable quality processes |
+| Intellectual property | Commercial GPU IP is heavily encumbered | Clean-room original development and legal reviews |
+| Market trust | Broad claims made before evidence can mislead | Transparent stage labels, changelog and public testing |
+| Resources | GPU silicon demands specialized people, tools and capital | Phased milestones, collaborators and independent feasibility gates |
+| Date confusion | Repository existed before GX work | Explicit chronology and dated research log |
 

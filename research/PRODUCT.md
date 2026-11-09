@@ -1,42 +1,46 @@
-# Product brief — exploratory, not a specification
+# Product concept: an individual-first graphics ecosystem
 
-**Research date:** 2026-11-09
+**Stage:** Pre-prototype architecture research.
 
-## Mission
+## 1. RONICZ GX Card
 
-Investigate whether a small team can make credible progress toward a **high-VRAM, efficient, desktop-class** graphics and compute product that supports **AI, gaming, rendering, 3D CAD and creative workflows** at a comparatively accessible price.
+Potential family names: **GX 12**, **GX 24**, **GX 48**, referring to **12 / 24 / 48 GB dedicated graphics memory goals**.
 
-There are two separate products, not one confused processor:
+Intended consumer workloads: PC gaming, Blender and related 3D workflows, CAD/visualization, video and content creation, graphics programming, local AI inference and experimental scientific compute.
 
-1. **RONICZ GX Card:** proposed PCIe add-in card using original or legally licensed graphics silicon, local GDDR-class VRAM, cooling, power delivery, firmware and drivers.
-2. **RONICZ GX Station:** proposed compact tower / workstation built around a **commercial x86-64 processor (initial preference Intel)**, ordinary DDR5 system DIMMs, a GPU add-in card, NVMe storage and Windows 11. It is not a unified-memory DGX Spark clone.
+Required investigation includes real graphics pipelines, rasterization, shader compilation, display output, video engines, tensor/vector compute, PCIe and memory controllers, Windows kernel/user drivers, application validation, cooling and reliability.
 
-## Why users might care
+**A card cannot become a full NVIDIA competitor merely by increasing VRAM.** The entire graphics software ecosystem matters.
 
-- Creators need useful 3D rendering and video performance.
-- AI practitioners may need **more dedicated VRAM** for local models and larger workloads.
-- PC gamers need graphics API compatibility and reliable drivers.
-- Workstation customers care about reliability, noise, heat, serviceability and software support.
-- Price-sensitive buyers value the **total system cost**, not TFLOPS claims alone.
+## 2. RONICZ GX Station
 
-## Non-negotiable evidence standards
+A proposed **complete personal computer**, rather than an AI-only box.
 
-- No GPU silicon, PCB, driver or full GPU benchmarks exist yet.
-- A vector ALU RTL file is **not** evidence of a complete GPU.
-- Target VRAM is **not** present hardware.
-- The marketing price is **not** a bill-of-materials estimate or committed selling price.
-- Workloads and FPS must not be advertised until independently reproduced.
+- A commercial x86-64 host CPU (Intel platform a first candidate, no affiliation implied).
+- **Standard desktop DDR5 system RAM** on a suitable motherboard.
+- A discrete GX GPU with its own separate VRAM, if developed.
+- NVMe storage, network connectivity, ports, appropriate power delivery and a maintainable cooling system.
+- Windows 11 compatibility goal, alongside Linux research support.
+- User-facing workloads spanning gaming, 3D, design, local AI, rendering and ordinary desktop computing.
+- No unified-memory architecture proposed for this initial form factor.
 
-## Near-term deliverable
+A working GX Station concept may initially need to use a **licensed or existing third-party GPU** for system integration testing. That would not mean RONICZ has built its own GPU.
 
-Implement and verify a small RTL compute block, create a simple public numerical model, and develop an explicit verification plan for future FPGA work.
+## Principles
 
-## Product acceptance milestones
+**Consumer first.** Individuals, learning communities and independent studios are the primary design center; SMB buyers are welcome.
 
-1. Correct simulation tests in CI.
-2. Synthesizable, verified components with documented assumptions.
-3. FPGA prototype executing a defined compute kernel with external memory.
-4. Host interface and driver proof-of-concept with reproducible telemetry.
-5. Graphics pipeline and API compatibility tests, only after compute functionality is demonstrated.
-6. Costed hardware design and manufacturer quotes, before making retail-price claims.
+**Ownable and upgradeable.** Investigate standard PC components, good serviceability and long-lived driver support.
+
+**Measured efficiency.** Real sustained workloads, frame times, inference throughput, wattmeter or validated board sensors, noise and thermal conditions.
+
+**Independence without exaggeration.** No proprietary architecture cloning, unlicensed IP reuse, fictional results, 'works on all motherboards' guarantees or premature product preorder.
+
+## Unresolved choices
+
+Original GPU ASIC versus licensing, processor and motherboard model, memory bus width and packaging, fabrication feasibility, Windows driver scope, gaming API approach, certification and the economic viability of manufacturing.
+
+## Current deliverables
+
+A tiny original RTL ALU experiment, simple model-weight memory estimator, unit/RTL tests, documentation and a concept website. None of these amount to an integrated GPU system.
 

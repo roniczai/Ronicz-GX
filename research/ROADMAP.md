@@ -1,40 +1,49 @@
-# Engineering roadmap: evidence gates, not delivery promises
+# Public research roadmap: demonstrate first, claim later
 
-## Gate 0 — repository baseline (2026-11-09)
+This is a sequence of **engineering evidence gates**, not a product launch commitment. Schedule, funding, team and available tools will determine whether each gate can be reached.
 
-- Record project scope honestly, source links and stage.
-- Publish original vector ALU RTL and self-checking simulation.
-- Publish memory calculator with its limitations and unit tests.
-- Publish a concept-only project webpage.
-- **Gate exit:** continuous integration runs test suite successfully.
+## Gate 0 — public research baseline: achieved
 
-## Gate 1 — 0–30 days of focused work
+- Clearly mark RONICZ GX as a research concept.
+- Publish a minimal original 8-lane integer vector ALU and testbench.
+- Publish a Python memory-capacity model with tests.
+- Document hardware, software, consumer needs and open risks.
+- Publish an accessible concept website source.
 
-- Establish verifiable baseline vector/integer architecture; review open research licenses.
-- Add ALU operations, lanes, masking, register file, parameterized tests.
-- Study independent memory models and workload characteristics.
-- **Gate exit:** test coverage and initial synthesis report.
+**Evidence:** successful GitHub Actions tests. Not evidence of GPU hardware.
 
-## Gate 2 — 1–3 months (depends on equipment)
+## Gate 1 — credible compute architecture: planned
 
-- Select accessible FPGA, simulator and host-interface approach.
-- Measure resource use, throughput and power *on a specific hardware platform*.
-- Prove one workload end-to-end in a repeatable environment.
-- **Gate exit:** archived scripts, waveforms, hardware information and measured report.
+- Define and test instruction/control flow, vector-mask behaviour, register file and memory access.
+- Develop a software reference implementation with independently checkable outputs.
+- Add representative compute kernels and coverage, synthesis reports and resource accounting.
+- Publish failures and fixes.
 
-## Gate 3 — 3–12+ months
+**Exit evidence:** repeatable simulation, design review and implementation limitations.
 
-- Develop more GPU-like scheduler/memory hierarchy and compute runtime.
-- Prototype PCIe transport, host software and development API.
-- Compare time, cost and risk of full original ASIC vs licensed commercial silicon.
-- **Gate exit:** architecture review with evidence and realistic budget.
+## Gate 2 — verified FPGA compute demonstration: planned
 
-## Gate 4 — multi-year / substantial funding
+- Select platform within actual means.
+- Implement a host-controlled compute kernel, data transfer, external-memory interface and telemetry.
+- Publish a traceable test procedure, exact hardware and reproducible logs.
 
-- License or develop production-ready GPU IP, GDDR controller/PHY, PCIe IP.
-- Fabrication, packaging, signal integrity, thermals, board prototype and drivers.
-- Rendering, DirectX/Vulkan, video/display, game certification, QA and support.
-- **Gate exit:** repeatable independent performance, reliability and economics.
+**Exit evidence:** independent hardware measurement, not only simulation.
 
-Each gate can end in a pivot or cancellation. This is a research plan, not a guaranteed product launch timeline.
+## Gate 3 — GPU platform and GX Station prototype feasibility: planned
+
+- Study consumer application software, driver approaches, Windows/WDDM requirements and graphics pipeline.
+- Build a GX Station reference *using existing compatible components if necessary*.
+- Test system architecture with separate DDR5 and discrete GPU memory.
+- Identify licensing, IP, fabrication and maintainability constraints.
+
+**Exit evidence:** honest prototype specification, tested system, validated compatibility matrix.
+
+## Gate 4 — independent graphics hardware and wider access: exploratory long term
+
+- Establish whether original GPU silicon or legally licensed commercial graphics silicon can be manufactured.
+- Develop graphics and creator application support with measured, sustainable performance.
+- Validate thermals, power, reliability, repairability and regulatory compliance.
+- Only announce product availability when these capabilities exist and can be supported.
+
+Projects may pivot or stop at any gate. Consumer affordability remains a **mission to investigate**, never an unverified promise.
 

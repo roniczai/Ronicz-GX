@@ -1,32 +1,29 @@
-# Publishing the static website
+# Website deployment: RONICZ GX
 
-The \`docs/\` directory is a static HTML/CSS/JS site. It does not require VPS, a build step or paid hosting.
+The website is **source code** in \`docs/\`. The code being in a repository does not mean the page is live.
 
-## GitHub Pages (after repository rename)
+## Publish on GitHub Pages
 
-1. Repository **Settings → General → Repository name**: rename \`rayhan\` to \`RONICZ-GX\`.
-2. **Settings → Pages → Build and deployment → Deploy from a branch**.
-3. Select \`main\` and \`/docs\`, then save.
-4. The expected GitHub Pages address after successful deployment is \`https://roniczai.github.io/RONICZ-GX/\`. It is **not live until GitHub confirms deployment**.
+1. Open repository [Settings → Pages](https://github.com/roniczai/Ronicz-GX/settings/pages).
+2. Under **Build and deployment**, select **Deploy from a branch**.
+3. Select branch **main**, folder **/docs**, and Save.
+4. Wait for a successful Pages deployment in GitHub. **Only then** test the GitHub Pages URL: \`https://roniczai.github.io/Ronicz-GX/\`.
 
-## Custom subdomain: \`gpu.ronicz.ai\`
+## Optional custom domain: \`gpu.ronicz.ai\`
 
-Use your actual DNS provider (e.g., Hostinger DNS if that is managing the domain):
+1. Confirm which DNS provider currently manages the nameservers for \`ronicz.ai\`.
+2. In GitHub Pages settings, enter the custom domain: \`gpu.ronicz.ai\`.
+3. In the actual DNS provider, add a CNAME: \`gpu\` → \`roniczai.github.io\`. Avoid conflicting A/AAAA/CNAME records for the same hostname.
+4. Allow DNS and GitHub domain validation to complete. Turn on **Enforce HTTPS** when available.
+5. GitHub typically writes a \`docs/CNAME\` file after configuration. If necessary, its entire content is the hostname \`gpu.ronicz.ai\`.
 
-- Create a **CNAME** record for host \`gpu\`, pointing to \`roniczai.github.io\`.
-- In GitHub Pages Settings set custom domain to \`gpu.ronicz.ai\`, then wait for DNS verification and HTTPS provisioning.
-- Select **Enforce HTTPS** once available.
-- GitHub may create a \`docs/CNAME\` file when the custom domain is configured. If you edit it manually, its sole content is \`gpu.ronicz.ai\`.
-- Do **not** configure both conflicting A and CNAME records for \`gpu\`.
+**Neither Pages nor the custom DNS was configured by committing these files.** Live hosting must be verified separately.
 
-At the time of this file's creation DNS and GitHub Pages have **not** been changed. The project homepage is **not yet deployed** to the subdomain.
+## Site quality checklist
 
-Alternative: deploy the contents of \`docs/\` as static files on a separate Hostinger subdomain / website. Configure DNS according to that host's actual instructions.
-
-## Final checklist
-
-- Replace internal GitHub links from the historical \`roniczai/rayhan\` URL with the new canonical repository URL if desired (GitHub usually redirects the old URL).
-- Confirm all target labels still say research/concept.
-- Verify mobile rendering, accessibility and HTTPS.
-- Don't add fake product photos, sales buttons, FPS results, benchmark scores or shipping dates.
+- Mobile and desktop visual inspection.
+- No product ordering, fake benchmarks, fabricated hardware photos or misleading launch language.
+- Verify links, favicon, page title and SEO descriptions.
+- Keep research evidence and milestone status current.
+- Ensure HTTPS before publicly sharing a custom domain.
 
