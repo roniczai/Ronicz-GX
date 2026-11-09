@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.vvp
+*.vcd
+*.out
+.DS_Store
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+

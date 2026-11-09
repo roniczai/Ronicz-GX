@@ -1,0 +1,27 @@
+name: Validate research code
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  python-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m unittest discover -s experiments -p "test_*.py" -v
+
+  rtl-simulation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Icarus Verilog
+        run: sudo apt-get update && sudo apt-get install -y iverilog
+      - name: Compile and simulate vector ALU
+        run: |
+          iverilog -g2012 -o /tmp/gx_alu rtl/gx_vector_alu.sv rtl/tb_gx_vector_alu.sv
+          vvp /tmp/gx_alu
+
