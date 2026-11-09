@@ -77,9 +77,9 @@ We welcome documented technical corrections, simulator improvements, hardware ve
 
 **Research is not a preorder, product reservation or promise of release.** RONICZ GX is independent of NVIDIA, Intel, AMD, Microsoft and other named vendors.
 
-## Transparent project chronology
+## Research project chronology
 
-This GitHub repository was originally created **4 March 2026** under the name \`rayhan\` for an unrelated project. It was renamed and repurposed for public RONICZ GX research on **9 November 2026**. Repository creation date is not the GPU project's start date.
+RONICZ GX public technical research was first documented on **9 November 2026**. The age of a GitHub repository is not evidence of when a specific engineering project began.
 
 © 2026 RONICZ Technovationz Pvt. Ltd. Code and original documentation are made available under [MIT](LICENSE), except third-party material as separately licensed.
 
