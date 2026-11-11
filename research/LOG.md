@@ -16,3 +16,8 @@ Removed public target selling prices and replaced premature claims with observab
 
 **Next meaningful evidence:** extended RTL/test coverage; a verified GPU-like kernel, and later an FPGA demonstration with disclosed hardware and measurements.
 
+## 2026-11-12 — programmable compute baseline
+
+An AI-assisted minimal four-lane lockstep integer compute demonstrator was added to research software and RTL, along with program execution tests. The example computes vector multiply-add over four independently stored data lanes. The applicant has not yet documented independent FPGA testing, original hardware implementation or proprietary instruction-set innovation.
+
+**Verification:** see the commit-linked GitHub Actions run and repeat the listed commands. This stage is an incremental educational compute proof, not a GPU, custom silicon or completed personal engineering milestone.

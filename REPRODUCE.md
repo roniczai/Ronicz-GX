@@ -15,6 +15,26 @@ python experiments/memory_budget.py --vram-gb 24 --parameters-b 14 --bits 4
 
 The model-weight estimator uses **decimal GB** and excludes many real runtime allocations (e.g., activation space, KV cache, kernel workspace). The fit output does not guarantee an AI model runs.
 
+## GX-Mini programmable core
+
+Runs on Python 3.10+ using only the standard library:
+
+~~~sh
+python sim/gx_core.py
+python -m unittest discover -s sim -p "test_*.py" -v
+~~~
+
+The demo reports the computed output [29, 46, 92, 140] after actually running an encoded seven-instruction program on four lockstep lanes.
+
+For the matching functional Verilog RTL, use Icarus Verilog:
+
+~~~sh
+iverilog -g2012 -o gx_program_test rtl/gx_program_core.sv rtl/tb_gx_program_core.sv
+vvp gx_program_test
+~~~
+
+This is a toy programmable compute demonstration and was prepared with AI assistance. No FPGA hardware or graphics compatibility has been demonstrated.
+
 ## RTL simulation
 
 Install \`iverilog\` and \`vvp\` (Icarus Verilog).
@@ -39,4 +59,3 @@ The same commands run in [the repository workflow](.github/workflows/validate.ym
 ## What would strengthen this
 
 Randomized property testing, broader parameterized lanes, boundary/overflow tests, independent reference models, synthesis results, real kernels, and eventually FPGA measurements. Please contribute test cases or reproducible improvements.
-

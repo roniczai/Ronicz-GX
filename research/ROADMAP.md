@@ -12,6 +12,14 @@ This is a sequence of **engineering evidence gates**, not a product launch commi
 
 **Evidence:** successful GitHub Actions tests. Not evidence of GPU hardware.
 
+## Gate 0.5 — small programmable lockstep prototype: simulated baseline published
+
+- AI-assisted four-lane functional core with a shared program counter, eight integer registers per lane, sixteen memory words per lane, instruction decoder and simple programs.
+- Python simulator and functional Verilog RTL plus repeatable deterministic tests.
+- Next: applicant independently reproduces the runs and adds a personally authored architectural improvement.
+
+**Evidence:** source code and successful tests once verified through CI. This is not a complete GPU or a synthesized FPGA.
+
 ## Gate 1 — credible compute architecture: planned
 
 - Define and test instruction/control flow, vector-mask behaviour, register file and memory access.
@@ -46,4 +54,3 @@ This is a sequence of **engineering evidence gates**, not a product launch commi
 - Only announce product availability when these capabilities exist and can be supported.
 
 Projects may pivot or stop at any gate. Consumer affordability remains a **mission to investigate**, never an unverified promise.
-

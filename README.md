@@ -5,9 +5,9 @@
 ![Stage](https://img.shields.io/badge/stage-research%20concept-7789d8)
 ![License](https://img.shields.io/badge/code%20license-MIT-7386c6)
 
-**An independent, public R&D project from RONICZ Technovationz Pvt. Ltd., Kochi, India.**
+**An independent engineering research initiative led by Rahul Raj (Kochi, India), using the RONICZ GX project name. This is a personal build/research portfolio, not a completed product or a corporate fundraising application.**
 
-> **Research status, 9 November 2026:** A working **8-lane integer vector-ALU simulation** and tested Python memory-budgeting tool are available here. **No RONICZ GPU silicon, graphics card, FPGA demonstrator, Windows GPU driver, production motherboard or finished workstation has been built.** Memory variants, performance, efficiency and compatibility remain proposed goals, not specifications or product announcements.
+> **Research status, 12 November 2026:** A working **8-lane integer vector-ALU simulation**, a **small programmable four-lane lockstep compute demonstrator in Python/Verilog**, and a tested Python memory-budgeting tool are available here. **No RONICZ GPU silicon, graphics card, FPGA demonstrator, Windows GPU driver, production motherboard or finished workstation has been built.** Memory variants, performance, efficiency and compatibility remain proposed goals, not specifications or product announcements.
 
 ## Why this exists
 
@@ -40,6 +40,7 @@ These ideas are **design goals**. They have not been established as novel, paten
 
 ## What we have actually produced
 
+- [GX-Mini v0.1 programmable compute demonstrator](sim/README.md): 4-lane lockstep processor with instruction fetch/decode, per-lane registers and memory, Python simulator, Verilog RTL and self-checking tests. **Research scaffolding prepared with AI assistance**, to be independently studied and extended by the applicant. Not a full GPU or FPGA design.
 - [Original 8-lane integer vector ALU RTL](rtl/gx_vector_alu.sv), with [self-checking simulation testbench](rtl/tb_gx_vector_alu.sv).
 - [Small Python model-weight memory estimator](experiments/memory_budget.py), with [unit tests](experiments/test_memory_budget.py). It is not a GPU benchmark or proof of actual VRAM performance.
 - [Automated Python and RTL validation](.github/workflows/validate.yml). See the GitHub Actions results.
@@ -53,7 +54,8 @@ These ideas are **design goals**. They have not been established as novel, paten
 | Stage | Evidence required | Status |
 |---|---|---|
 | Small architectural building blocks | Source code, self-checking tests, repeatable outputs | **Initial experiments published** |
-| GPU-like compute architecture | Scheduler, register/memory hierarchy, executable kernels | **Not demonstrated** |
+| Small programmable lockstep integer demonstrator | Fetch/decode, per-lane register/memory, program execution and tests | **Initial simulated model and RTL published; not GPU architecture** |
+| GPU-like compute architecture | Scheduler, scalable memory hierarchy, executable kernels | **Not demonstrated** |
 | FPGA proof of concept | Specified FPGA board, synthesis, workload measurements | **Not built** |
 | Discrete GPU + graphics stack | Hardware, PCIe, memory, rendering pipeline, drivers | **Not built** |
 | GX Station | Assembly, OS validation, component compatibility, thermal testing | **Not built** |
@@ -68,6 +70,7 @@ These ideas are **design goals**. They have not been established as novel, paten
 - [Open design questions](research/OPEN_QUESTIONS.md)
 - [Engineering and adoption risks](research/RISKS.md)
 - [Current technical evidence](research/EVIDENCE.md)
+- [Personal reviewer guide and author contribution boundaries](research/BASIS_REVIEW_GUIDE.md)
 - [Research log](research/LOG.md)
 - [References](research/SOURCES.md)
 
@@ -82,4 +85,3 @@ We welcome documented technical corrections, simulator improvements, hardware ve
 RONICZ GX public technical research was first documented on **9 November 2026**. The age of a GitHub repository is not evidence of when a specific engineering project began.
 
 © 2026 RONICZ Technovationz Pvt. Ltd. Code and original documentation are made available under [MIT](LICENSE), except third-party material as separately licensed.
-
